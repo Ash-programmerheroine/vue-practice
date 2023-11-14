@@ -22,6 +22,7 @@ const app = Vue.createApp({
             book.isFav = !book.isFav
 
         }
+       
         // handleEvent(e,data){
         //     console.log(e, e.type);
         //     if(data){
@@ -33,6 +34,13 @@ const app = Vue.createApp({
         //     this.y = e.offsetY
             
         // }
+     },
+       computed:
+       {
+           filteredBooks(){
+               return this.books.filter((book) => book.isFav);
+           }
+
        }
     
 //  template: '<h2>I am Ashrafi</h2>'
